@@ -45,6 +45,7 @@ def strip(dark, number_font, label_font):
         x = width * i + width / 2
         head, _, tail = value.partition('/')
         shown = f'{head}<tspan fill="{c["dim"]}">/</tspan>{tail}' if tail else value
+        cells.append(f'<ellipse cx="{x:.0f}" cy="{H / 2 + 8:.0f}" rx="{width * .5:.0f}" ry="78" fill="url(#halo)"/>')
         cells.append(f'<g class="stat" style="animation-delay:{.08 * i:.2f}s">'
                      f'<text x="{x:.0f}" y="122" class="n" text-anchor="middle">{shown}</text>'
                      f'<text x="{x:.0f}" y="164" class="l" text-anchor="middle">{label}</text></g>')
@@ -71,6 +72,7 @@ def strip(dark, number_font, label_font):
 <radialGradient id="spot"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
 <radialGradient id="glow"><stop offset="0" stop-color="{c['glow']}" stop-opacity=".12"/><stop offset="1" stop-color="{c['glow']}" stop-opacity="0"/></radialGradient>
 <mask id="m" maskUnits="userSpaceOnUse" x="0" y="0" width="{W}" height="{H}"><g class="sweep"><ellipse cx="0" cy="{H / 2}" rx="280" ry="220" fill="url(#spot)"/></g></mask>
+<radialGradient id="halo"><stop offset=".55" stop-color="{c['bg']}"/><stop offset="1" stop-color="{c['bg']}" stop-opacity="0"/></radialGradient>
 <clipPath id="frame"><rect width="{W}" height="{H}"/></clipPath>
 </defs>
 <rect width="{W}" height="{H}" fill="{c['bg']}"/>

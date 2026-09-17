@@ -12,14 +12,10 @@
 
 I build data pipelines the way they run in production: orchestrated, containerised, tested in CI, and guarded by data-quality checks that fail loudly. My work covers real-time streaming with Kafka, orchestrated ELT into dimensional warehouses, and Terraform-defined lakehouses on AWS. I also apply ML and evaluation tooling to security problems.
 
-<table width="100%">
-  <tr>
-    <td align="center" valign="top" width="25%"><h3>5</h3><sub>production-style pipelines</sub></td>
-    <td align="center" valign="top" width="25%"><h3>34</h3><sub>automated tests</sub></td>
-    <td align="center" valign="top" width="25%"><h3>5 / 5</h3><sub>repos tested in CI</sub></td>
-    <td align="center" valign="top" width="25%"><h3>0</h3><sub>cloud accounts needed to run</sub></td>
-  </tr>
-</table>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg">
+  <img src="assets/stats-light.svg" alt="5 pipelines, 34 automated tests, 5 of 5 repos tested in CI, 0 cloud accounts needed" width="100%">
+</picture>
 
 ## Tech stack
 
